@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="error">
+  <Appenders>
+    <JDBC name="databaseAppender" tableName="APP_LOG">
+      <ConnectionFactory class="com.example.log.config.ConnectionFactory" method="getDatabaseConnection" />
+      <Column name="APP_NAME" pattern="Insert_this_val" isUnicode="false"/>
+    </JDBC>
+  </Appenders>
+  <Loggers>
+    <Root level="error">
+      <AppenderRef ref="databaseAppender"/>
+    </Root> 
+  </Loggers> 
+</Configuration>
